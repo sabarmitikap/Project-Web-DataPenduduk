@@ -16,14 +16,14 @@ db.authenticate().then(() => {
 })
 
 //Routes
-const actorRoutes = require('./routes/penduduk');
+const pendudukRoutes = require('./routes/penduduk');
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 app.use(cors("*"));
 
 //Use Routes
-app.use('/actor', actorRoutes);
+app.use('/penduduk', pendudukRoutes);
 
 //Inisialisasi Server
 const PORT = process.env.PORT || 5001;
